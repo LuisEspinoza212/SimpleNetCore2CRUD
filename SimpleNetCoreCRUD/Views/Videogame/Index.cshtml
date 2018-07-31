@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SimpleNetCoreCRUD.Models.Videogame>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<h3>Videogames</h3>
+<hr />
+<a asp-action="Create" class="btn btn-sm btn-primary">Create</a>
+<br />
+<br />
+<div class="form-group">
+
+    <table class="table">
+
+        <tr>
+            <th>@Html.DisplayNameFor(m=>m.Title)</th>
+            <th>@Html.DisplayNameFor(m=>m.Genre)</th>
+            <th>@Html.DisplayNameFor(m=>m.Publisher)</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayName(item.Title)</td>
+                <td>@Html.DisplayName(item.Genre)</td>
+                <td>@Html.DisplayName(item.Publisher)</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-sm">Details</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+

@@ -1,0 +1,57 @@
+﻿@model SimpleNetCoreCRUD.Models.Videogame
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<br />
+<h2>Delete</h2>
+<hr />
+
+<form asp-action="Delete">
+
+
+    <div class="row form-border">
+            <br />
+            <div class="row">
+                <!--Title-->
+                <div class="col-md-1">
+                    <label asp-for="Title"></label>
+                </div>
+                <div class="col-md-4">
+                    <input asp-for="Title" disabled class="form-control" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <!--Genre-->
+                <div class="col-md-1">
+                    <label asp-for="Genre"></label>
+                </div>
+                <div class="col-md-4">
+                    <input asp-for="Genre" disabled class="form-control" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <!--Publisher-->
+                <div class="col-md-1">
+                    <label asp-for="Publisher"></label>
+                </div>
+                <div class="col-md-4">
+                    <input asp-for="Publisher" disabled class="form-control" />
+                </div>
+            </div>
+            <br />
+            <br />
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-sm btn-primary" value="Delete" />
+            <input type="submit" class="btn btn-sm btn-success" value="Back to List" asp-action="Index" />
+        </div>
+
+    </div>
+
+</form>
+

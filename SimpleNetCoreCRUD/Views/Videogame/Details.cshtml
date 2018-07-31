@@ -1,0 +1,49 @@
+﻿@model SimpleNetCoreCRUD.Models.Videogame
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br />
+<h2>Details</h2>
+<hr />
+
+    <div class="row form-border">
+            <br />
+            <div class="row">
+                <!--Title-->
+                <div class="col-md-1">
+                    <label asp-for="Title"></label>
+                </div>
+                <div class="col-md-4">
+                    <input asp-for="Title" disabled class="form-control" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <!--Genre-->
+                <div class="col-md-1">
+                    <label asp-for="Genre"></label>
+                </div>
+                <div class="col-md-4">
+                    <input asp-for="Genre" disabled class="form-control" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <!--Publisher-->
+                <div class="col-md-1">
+                    <label asp-for="Publisher"></label>
+                </div>
+                <div class="col-md-4">
+                    <input asp-for="Publisher" disabled class="form-control" />
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <a class="btn btn-sm btn-primary" asp-route-id="@Model.Id" asp-action="Edit">Edit</a>
+            <a class="btn btn-sm btn-success" asp-action="Index">Back to List</a>
+
+    </div>
